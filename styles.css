@@ -1,0 +1,114 @@
+html{
+
+	 background-color: #F4F4F4; /* still testing #F5F5F5 */
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;   
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    font-size: 14px;
+    color: #373737;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#paper-title{	
+	/*font-family: Arial, Helvetica, sans-serif; */
+	margin: auto;
+	text-align: center;
+	font-size: 30px;
+	font-weight:300;
+}
+
+.chapter{
+	font-size: 20px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.center{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#authors{
+	list-style-type:none;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#porav, #bruls, #newman, #uni{
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#uni{
+	margin-top: 10px;
+	 font-size: 17px;
+}
+
+.row, .legend{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.example{
+	width: 280px;
+	height: 180px;
+	margin: 5px;
+}
+
+.legend{
+	justify-content: space-around;
+}
+
+.content > div > p {
+	margin-top: 0;
+}
+
+.description{
+	text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+#results-table1 {
+	margin-top: 14px;
+}
+
+/*highlight reference when user ariives at it*/
+.clicked-ref:target {
+   -webkit-animation: target-fade 4s 1;
+    -moz-animation: target-fade 4s 1;
+}
+
+@-webkit-keyframes target-fade {
+    0% { background-color: rgba(255,255,0,0.3); }
+    100% { background-color: rgba(0,0,0,0); }
+
+}
+@-moz-keyframes target-fade {
+    0% { background-color: rgba(255,255,0,0.3); }
+    100% { background-color: rgba(0,0,0,0); }
+}
