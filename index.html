@@ -4,14 +4,14 @@
 <head>
 	 <link rel="stylesheet" href="styles.css">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	 <title>Robotcar-rainy</title> 
+	 <title>I Can See Clearly Now : Image Restoration via De-Raining</title> 
 </head>
 
 <body>
 	<div class="content">
 		
-	<div id="paper-title">This is where the title of the paper will be placed</div>
-	<br/><br/><br/><br/>
+	<div id="paper-title">I Can See Clearly Now : Image Restoration via De-Raining</div>
+	<br/><br/>
 
 	
 	<div class="details">	
@@ -32,32 +32,33 @@
 		
 		<div id="uni">University of Oxford</div>
 	</div>	
-	<br/><br/><br/><br/>
-
-
-	<div class="chapter">Abstract</div>
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</div>
 	<br/><br/>
 
 
+	<div class="chapter">Abstract</div>
+	<div>We present a method for improving segmentation tasks on images affected by adherent rain drops and streaks. We introduce a novel stereo dataset recorded using a system that allows one lens to be affected by real water droplets while keeping the other lens clear. We train a denoising generator using this dataset and show that it is effective at removing the effect of real water droplets, in the context of image reconstruction and road marking segmentation. To further test our de-noising approach, we describe a method of adding computer-generated adherent water droplets and streaks to any images, and use this technique as a proxy to demonstrate the effectiveness of our model in the context of general semantic segmentation. We benchmark our results using the CamVid road marking segmentation dataset, Cityscapes semantic segmentation datasets and our own real-rain dataset, and  show significant improvement on all tasks.</div>
+	<br/><br/>
+
+	<iframe width="869" height="489" src="https://www.youtube.com/embed/P4a7C-V70Y8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 	<div class="chapter">Architecture</div>
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. This <a href="#src1" class="clicked-ref">reference [1]</a> takes you to the article details.</div>
 	<br/>
 	<img src="architecture.png" alt="Network architecture" class="center">
-	<p class="description"><em>Fig 1. This is the description of the architecture.</em></p> 
+	<p class="description"><em>Fig 1. The internal architecture of our generator. We motivate the addition of additive skip connections by observing that much of the structure of the input image should be kept, along with illumination levels and fine details.</em></p> 
 	<br/><br/>
 
 
 	<div class="chapter">Rain-making device</div>
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. This <a href="#src2" class="clicked-ref">reference [2]</a> takes you to the article details. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</div>
+	<div></div>
 	<br/>
 	<img src="rainmaker.jpg" alt="Rainmaker" class="center">
-	<p class="description"><em>Fig 2. This is the description of the rainmaker.</em></p>  
+	<p class="description"><em>Fig 2. Our small-baseline stereo camera setup. A bi-partite chamber with acrylic clear panels is placed in front of the lenses, with the left-hand section being kept dry at all times, while the right-hand section is sprayed with water droplets using an internal nozzle.</em></p>  
 	<br/><br/>
 
 
 	<div class="chapter">Dataset</div>
-	<div>This is where you describe the dataset and show examples. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. The interested reader is is invited to download the full dataset by clicking <a href="dataset.zip" download="Robotcar-rainy dataset">this link.</a></div>
+	<div>The dataset will be available at <a href="dummy.zip" download="Robotcar-rainy dataset">this link</a> soon!</div>
 	<br/><br/>
 
 	<div>
@@ -86,13 +87,13 @@
 			<p>b) Rainy</p>
 			<p>c) Ground truth</p>
 		</div>
-		<p class="description"><em>Fig 3. This is the description of the dataset examples.</em></p> 
+		<p class="description"><em>Fig 3. Examples from our dataset.</em></p> 
 	</div>
 	<br/><br/>
 	
 
 
-	<div class="chapter">Results</div>
+	<!-- <div class="chapter">Results</div>
 	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</div>
 	<br/>
 
@@ -127,7 +128,7 @@
 			</tr>
 		</table>
 		<p class="description" id="results-table1"><em>Table 1. This is the description of the results.</em></p>
-	</div>
+	</div> -->
 	<br/><br/>
 
 	<div class="chapter">References</div>
